@@ -7,7 +7,15 @@
 <body>
     <h1>Lista de Personas</h1>
 
-    <a th:href="@{/new}">Introducir un nuevo tripulante...</a>
+    <a th:href="@{/naves}">Ver lista de naves...</a>
+
+    <br><br>
+
+    <a th:href="@{/newPersona}">Introducir un nuevo tripulante...</a>
+
+    <br><br>
+
+    <a th:href="@{/newNave}">Introducir una nueva nave...</a>
 
     <br><br>
 
@@ -18,7 +26,7 @@
                 <th>Nombre</th>
                 <th>Rango</th>
                 <th>Licencia Estelar</th>
-                <!-- <th>Mision Asignada</th> -->
+                <th>Misiones Asignadas</th>
             </tr>
         </thead>
         <tbody>
@@ -27,7 +35,7 @@
                 <td th:text="${personas.nombre}"></td>
                 <td th:text="${personas.rango}"></td>
                 <td th:text="${personas.licenciaEstelar}"></td>
-                <!-- <td th:text="${personas.misionAsignada}"></td> -->
+                <td th:text="${#lists.size(personas.misionAsignada)}"></td>
             </tr>
         </tbody>
     </table>
