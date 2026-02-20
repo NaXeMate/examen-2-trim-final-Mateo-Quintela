@@ -21,19 +21,19 @@ public class PersonaWebController {
     }
 
     @GetMapping
-    public String getAllpersonas(Model model) {
+    public String getAllPersonas(Model model) {
         model.addAttribute("personas", personaService.getAllPersonas());
         return "personas";
     }
 
     @GetMapping("/new")
-    public String createpersonaForm(Model model) {
+    public String createPersonaForm(Model model) {
         model.addAttribute("persona", new Persona());
-        return "formulario";
+        return "formularioPersonas";
     }
 
     @PostMapping("/new")
-    public String saveNewpersona(@ModelAttribute Persona persona) {
+    public String saveNewPersona(@ModelAttribute Persona persona) {
         personaService.updatePersona(persona);
         return "redirect:/personas";
     }

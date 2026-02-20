@@ -17,7 +17,7 @@ import edu.examen.misionEstelar.service.NaveService;
 import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
-@RequestMapping("api/naves")
+@RequestMapping("/api/naves")
 public class NaveController {
 
     private final NaveService naveService;

@@ -31,6 +31,14 @@ public class Nave {
     @OneToMany(mappedBy = "nave", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<MisionAsignada> misionAsignada;
 
+    public Nave() {}
+
+    public Nave(String nombreNave, String modelo, int capacidadPasajeros) {
+        this.nombreNave = nombreNave;
+        this.modelo = modelo;
+        this.capacidadPasajeros = capacidadPasajeros;
+    }
+
     public Nave(Long id, String nombreNave, String modelo, int capacidadPasajeros) {
         this.id = id;
         this.nombreNave = nombreNave;
