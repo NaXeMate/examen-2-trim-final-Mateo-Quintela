@@ -64,6 +64,14 @@ public class MisionAsignada {
         this.presupuestoMision = presupuestoMision;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
     public Double getFechaEstelar() {
         return fechaEstelar;
     }
@@ -104,5 +112,4 @@ public class MisionAsignada {
         this.nave = nave;
     }
 
-    
 }
