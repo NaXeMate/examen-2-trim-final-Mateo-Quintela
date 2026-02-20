@@ -26,13 +26,13 @@ public class NaveWebController {
         return "naves";
     }
 
-    @GetMapping("/new")
+    @GetMapping("/newNave")
     public String createNaveForm(Model model) {
         model.addAttribute("nave", new Nave());
         return "formularioNaves";
     }
 
-    @PostMapping("/new")
+    @PostMapping("/newNave")
     public String saveNewNave(@ModelAttribute Nave nave) {
         naveService.updateNave(nave);
         return "redirect:/naves";

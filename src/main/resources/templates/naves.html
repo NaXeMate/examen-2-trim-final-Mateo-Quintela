@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Naves</title>
+</head>
+<body>
+    <h1>Lista de Naves</h1>
+
+   <a th:href="@{/personas}">Ver lista de personas...</a>
+
+    <br><br>
+
+    <a th:href="@{/newNave}">Introducir una nueva nave...</a>
+    
+    <br><br>
+    
+    <a th:href="@{/newPersona}">Introducir un nuevo tripulante...</a>
+
+    <br><br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Modelo</th>
+                <th>Capacidad</th>
+                <th>Misiones Asignadas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="naves : ${naves}">
+                <td th:text="${naves.id}"></td>
+                <td th:text="${naves.nombreNave}"></td>
+                <td th:text="${naves.modelo}"></td>
+                <td th:text="${naves.capacidadPasajeros}"></td>
+                <td th:text="${#lists.size(naves.misionAsignada)}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
