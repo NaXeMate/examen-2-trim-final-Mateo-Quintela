@@ -2,16 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Personas</title>
+    <title>Tripulantes</title>
 </head>
 <body>
-    <h1>Lista de Personas</h1>
+    <h1>Lista de Tripulantes</h1>
 
     <a th:href="@{/naves}">Ver lista de naves...</a>
 
     <br><br>
 
-    <a th:href="@{/newPersona}">Introducir un nuevo tripulante...</a>
+    <a th:href="@{/newTripulante}">Introducir un nuevo tripulante...</a>
 
     <br><br>
 
@@ -30,12 +30,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="personas : ${personas}">
-                <td th:text="${personas.id}"></td>
-                <td th:text="${personas.nombre}"></td>
-                <td th:text="${personas.rango}"></td>
-                <td th:text="${personas.licenciaEstelar}"></td>
-                <td th:text="${#lists.size(personas.misionAsignada)}"></td>
+            <tr th:each="tripulantes : ${tripulantes}">
+                <td th:text="${tripulantes.id}"></td>
+                <td th:text="${tripulantes.nombre}"></td>
+                <td th:text="${tripulantes.rango}"></td>
+                <td th:text="${tripulantes.licenciaEstelar}"></td>
+                <td th:text="${#lists.size(tripulantes.misionAsignada)}"></td>
             </tr>
         </tbody>
     </table>

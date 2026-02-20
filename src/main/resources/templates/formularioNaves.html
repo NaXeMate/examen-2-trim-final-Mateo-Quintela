@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Nave</title>
+</head>
+<body>
+    <h1>Crear una nueva nave</h1>
+
+    <a th:href="@{/naves}">Ver lista de naves...</a>
+
+    <br><br>
+
+    <form>
+        <label for="input_nombre">Nombre de la nave: </label>
+        <input type="text" id="input_nombre">
+
+        <label for="input_modelo">Modelo de la nave: </label>
+        <input type="text" id="input_modelo">
+
+        <label for="input_capacidad">Capacidad máxima de la nave: </label>
+        <input type="number" id="input_capacidad">
+    </form>
+
+</body>
+</html>

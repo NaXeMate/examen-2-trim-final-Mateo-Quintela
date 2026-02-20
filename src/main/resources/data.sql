@@ -1,5 +1,6 @@
--- 1. Inserción de Tripulantes (Persona) 
-INSERT INTO persona (id, nombre, rango, licencia_estelar) VALUES 
+-- 1. Inserción de Tripulantes (Tripulante) 
+-- Para coincidir con la entidad Tripulante, cambié el nombre de la tabla. --
+INSERT INTO tripulante (id, nombre, rango, licencia_estelar) VALUES
 (1, 'James T. Kirk', 'Capitán', 'NCC-1701-A'),
 (2, 'Nyota Uhura', 'Oficial', 'NCC-1884-U'),
 (3, 'Spock', 'Oficial', 'NCC-2234-S'),

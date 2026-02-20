@@ -23,7 +23,7 @@ public class MisionAsignada {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tripulante_id")
-    private Persona persona;
+    private Tripulante tripulante;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "nave_id")
@@ -54,10 +54,10 @@ public class MisionAsignada {
         this.presupuestoMision = presupuestoMision;
     }
 
-    public MisionAsignada(Long id, Persona persona, Nave nave, Double fechaEstelar,
+    public MisionAsignada(Long id, Tripulante tripulante, Nave nave, Double fechaEstelar,
             EstadoMision estadoMision, Double presupuestoMision) {
         this.id = id;
-        this.persona = persona;
+        this.tripulante = tripulante;
         this.nave = nave;
         this.fechaEstelar = fechaEstelar;
         this.estadoMision = estadoMision;
@@ -96,12 +96,12 @@ public class MisionAsignada {
         this.presupuestoMision = presupuestoMision;
     }
 
-    public Persona getPersona() {
-        return persona;
+    public Tripulante getTripulante() {
+        return tripulante;
     }
 
-    public void setPersona(Persona persona) {
-        this.persona = persona;
+    public void setTripulante(Tripulante tripulante) {
+        this.tripulante = tripulante;
     }
 
     public Nave getNave() {

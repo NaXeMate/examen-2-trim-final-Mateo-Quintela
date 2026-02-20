@@ -15,8 +15,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "persona")
-public class Persona {
+@Table(name = "tripulante")
+public class Tripulante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,18 +32,18 @@ public class Persona {
     @Column(name = "licencia_estelar", unique = true, nullable = false)
     private String licenciaEstelar;
 
-    @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "tripulante", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<MisionAsignada> misionAsignada;
 
-    public Persona() {}
+    public Tripulante() {}
     
-    public Persona(String nombre, Rango rango, String licenciaEstelar) {
+    public Tripulante(String nombre, Rango rango, String licenciaEstelar) {
         this.nombre = nombre;
         this.rango = rango;
         this.licenciaEstelar = licenciaEstelar;
     }
     
-    public Persona(Long id, String nombre, Rango rango, String licenciaEstelar) {
+    public Tripulante(Long id, String nombre, Rango rango, String licenciaEstelar) {
         this.id = id;
         this.nombre = nombre;
         this.rango = rango;
