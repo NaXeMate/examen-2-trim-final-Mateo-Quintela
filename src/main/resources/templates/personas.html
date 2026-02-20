@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Personas</title>
+</head>
+<body>
+    <h1>Lista de Personas</h1>
+
+    <a th:href="@{/new}">Introducir un nuevo tripulante...</a>
+
+    <br><br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Rango</th>
+                <th>Licencia Estelar</th>
+                <!-- <th>Mision Asignada</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="personas : ${personas}">
+                <td th:text="${personas.id}"></td>
+                <td th:text="${personas.nombre}"></td>
+                <td th:text="${personas.rango}"></td>
+                <td th:text="${personas.licenciaEstelar}"></td>
+                <!-- <td th:text="${personas.misionAsignada}"></td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
